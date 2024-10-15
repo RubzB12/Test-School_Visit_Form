@@ -7,7 +7,7 @@
 
 /* Body styles for better readability */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
     max-width: 1200px;
     margin: 0 auto;
@@ -18,13 +18,34 @@ body {
 /* Main form container */
 #form-style {
     width: 80%;
-    max-width: 800px; /* Limit the max-width for readability */
+    max-width: 800px;
     margin: 20px auto;
     background-color: #f9f9f9;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     color: #333;
+}
+
+/* Container for the header (h1 and image) */
+.header-container {
+    display: flex;               
+    align-items: center;         
+    justify-content: space-between; 
+    margin-bottom: 40px;           
+}
+
+/* Style for the h1 */
+.header-container h1 {
+    font-weight: bold;           
+    color: #103c5c;              
+}
+
+/* Style for the image */
+.header-container img {
+    width: 150px;               
+    height: auto;               
+    margin-left: 30%;
 }
 
 /* Modern input, textarea, and select styling */
@@ -66,7 +87,7 @@ form label {
     font-weight: 500;
 }
 
-/* Styling the radio buttons container */
+/* Radio buttons container */
 .ped-status-radio {
     display: flex;
     gap: 20px;
@@ -79,7 +100,7 @@ form label {
     display: none;
 }
 
-/* Create a custom styled radio button */
+/* Custom styled radio button */
 .ped-status-radio label {
     position: relative;
     padding-left: 35px;
@@ -92,7 +113,7 @@ form label {
     transition: color 0.3s ease;
 }
 
-/* The circle for the custom radio button */
+/* Circle for the custom radio button */
 .ped-status-radio label::before {
     content: '';
     position: absolute;
@@ -107,7 +128,7 @@ form label {
     transition: background-color 0.3s, border-color 0.3s;
 }
 
-/* The checked mark (inner circle) */
+/* Checked mark (inner circle) */
 .ped-status-radio input[type="radio"]:checked + label::after {
     content: '';
     position: absolute;
@@ -130,7 +151,7 @@ form label {
     border-color: #007bff;
 }
 
-/* Add focus state for keyboard navigation */
+/* Focus state for keyboard navigation */
 .ped-status-radio input[type="radio"]:focus + label::before {
     outline: 2px solid #007bff;
     outline-offset: 2px;
@@ -143,8 +164,8 @@ form label {
 }
 
 
-/* Responsive styles for smaller screens */
-@media (max-width: 480px) {
+/* Responsive styles for smaller tablets */
+@media (max-width: 768px) {
     body {
         padding: 5px;
     }
@@ -156,33 +177,40 @@ form label {
     form input, form select, form textarea, form button {
         padding: 10px;
     }
+    .header-container img {
+        width: 120px;    
+    }
 }
 
 /* Textarea specific styling */
 textarea {
     resize: vertical;
-    height: 150px; /* Control the default height of textarea */
+    height: 150px; 
 }
 
-/* Add hover effects to inputs */
+/* Hover effects to inputs */
 form input:hover, form textarea:hover, form select:hover {
-    border-color: #999; /* Slightly darken the border on hover */
+    border-color: #999; 
 }
 
+/* Responsive styles for smaller phones */
 @media (min-width: 480px) {
     .radio-group {
         flex-direction: column;
-        gap: 10px;} /* Ensure buttons align horizontally even on smaller screens */
+        gap: 10px;} 
     form {
         max-width: 600px;
-        margin: 0 auto; /* Center the form */
+        margin: 0 auto; 
     }
     form input[type="radio"] {
-        transform: scale(1); /* Keep radio button size normal on smaller screens */
+        transform: scale(1); 
     }
     .ped-status-radio label {
-        padding-left: 25px; /* Reduce padding */
-        font-size: 14px; /* Reduce font size */
+        padding-left: 25px; 
+        font-size: 14px; 
+    }
+    .header-container img {
+        width: 90px;    
     }
 }
 
@@ -192,7 +220,7 @@ form input:hover, form textarea:hover, form select:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 20px 0; /* Optional: Adds space above and below the slider */
+    margin: 20px 0; 
 }
 
 /* Styling the container to center the contents */
@@ -215,13 +243,13 @@ form input:hover, form textarea:hover, form select:hover {
 
 label {
     font-size: 18px;
-    margin-bottom: 20px; /* Space between label and output */
+    margin-bottom: 20px; 
 }
 
 /* Style for the input range slider */
 input[type="range"] {
     width: 100%;
-    max-width: 800px; /* Adjust max width as needed */
+    max-width: 800px; 
 }
 
 input[type="range"]::-webkit-slider-thumb {
