@@ -168,11 +168,15 @@ form input:hover, form textarea:hover, form select:hover {
     border-color: #999; /* Slightly darken the border on hover */
 }
 
-/* Ensure the form stays centered and clean on larger screens */
 @media (min-width: 768px) {
+    .radio-group {
+        flex-direction: row;} /* Ensure buttons align horizontally even on smaller screens */
     form {
         max-width: 600px;
         margin: 0 auto; /* Center the form */
+    }
+    form input[type="radio"] {
+        transform: scale(1); /* Keep radio button size normal on smaller screens */
     }
 }
 
